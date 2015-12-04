@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> Underground </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage n1;
+PImage n2;
+
+void setup()
+{
+	size(2000,2000);
+	frameRate(30);
+	
+	n1 = loadImage("images/n1.png"); 
+	n2 = loadImage("images/n2.png");
+}
+
+
+void draw()
+{
+    background(255,255,255);
+	image(n1,0,0)
+	
+	text(mouseX,10,200);
+    text(mouseY,100,200); 
+	
+
+	if (mousePressed == true && mouseButton == LEFT)
+{
+		if(mouseX > 330 && mouseX < 390 &&
+		   mouseY > 320 && mouseY < 400)
+		{
+			link("lobby.html");
+        }
+}
+
+    
+	
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

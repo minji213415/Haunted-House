@@ -1,0 +1,60 @@
+<html>
+<head>
+<title> Haunted House </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage n4;
+
+void setup()
+{
+
+	size(1200,600);
+	background(255,255,255);
+	frameRate(30); 
+	
+	n4 = loadImage("images/n4.png");
+	
+
+}
+
+
+void draw()
+{
+    background(255,255,255);
+	image(n4,0,0)
+	
+	text(mouseX,10,200);
+    text(mouseY,100,200); 
+    
+    if (mousePressed == true && mouseButton == LEFT)
+{
+		if(mouseX > 255 && mouseX < 380 &&
+		   mouseY > 150 && mouseY < 310)
+		{
+			link("underground.html");
+        }
+        
+}
+
+    if (mouseX > 255 && mouseX < 380 && mouseY > 150 && mouseY < 310||
+        mouseX > 434 && mouseX < 479 && mouseY > 190 && mouseY < 220
+        
+		)
+	{
+		cursor(HAND);
+	}
+	else	
+	{		
+		cursor(ARROW);
+	}
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
